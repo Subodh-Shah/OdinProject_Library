@@ -1,0 +1,56 @@
+/* Universal CSS */
+
+* {
+	box-sizing : border-box;
+	margin : 0;
+	padding : 0;
+}
+
+body {
+	padding : 8px;
+}
+
+/* General CSS */
+
+#addBookBtn {
+	padding : 4px;
+	border : 2px solid black;
+	border-radius : 5px;
+	cursor : pointer;
+}
+
+.book-container {
+	width : 100%;
+	font-size : 18px;
+	margin : 8px 0px;
+}
+
+.book-container table{
+	width: 100%;
+    border: 2px solid black;
+    border-style: groove;
+	border-collapse : collapse;
+}
+
+.book-container  th, td {
+	padding: 8px;
+	border : 1px solid red;
+	border-style : ridge;
+}
+
+.book-container th {
+	text-transform : uppercase;
+}
+
+.book-container .status-section {
+	display : flex;
+	height : 100%;
+	align-content : center;
+	justify-content : space-evenly; 
+}
+
+.book-container .status-change-btn {
+	border : 1px solid black;
+	width : 16px;
+	height : 16px;
+}
