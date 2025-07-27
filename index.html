@@ -8,35 +8,70 @@
 	<body>
 	
 		<h1 style="text-align: center; padding: 16px 0px;">My Library</h1>
-		<div class="add-btn-div">
-			<button id="addBookBtn">Add Book</button>	
+		
+		<!-- Button for adding book -->
+		<div>
+			<button id="addButton">Add Book</button>	
 		</div>
-		<div class="book-container">
-			<table>
-				<thead>
+		
+		<!-- Form for adding book -->
+		<div id="addBookForm" hidden>
+			<form>
+				<table>
 					<tr>
-						<th>Book Name</thth>
+						<td>
+							<label for="bookName">Book Name:</label><br>
+							<input type="text" name="bookName" id="bookName" maxlength="30" >
+						</td>
+						
+						<td>
+							<label for="bookPages">No of Pages:</label><br>
+							<input type="number" name="bookPages" id="bookPages">
+						</td>
+						
+					</tr>
+					
+					<tr>
+						<td>
+							<label for="bookAuthor">Author:</label><br>
+							<input type="text" name="bookAuthor" id="bookAuthor" maxlength="30">
+						</td>
+						
+						<td>
+							<label>Status:</label><br>
+							<label for="reading" class="status-radio">Reading<span>
+							<input type="radio" name="bookStatus" id="reading" value="Reading">
+							</span>
+							</label>
+							
+							<label for="completed" class="status-radio">Completed<span>
+							<input type="radio" name="bookStatus" id="completed" value="Completed">
+							</span>
+							</label>
+							
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							<input type="button" id="storeBtn" value="Store">
+						</td>
+					</tr>
+					
+				</table>	
+			</form>
+		</div>
+		
+		<!-- List of Books in table format -->
+		<div class="book-container">
+			<table class="books-record" id="booksRecord">
+					<tr>
+						<th>Book Name</th>
 						<th>Author</th>
 						<th>Pages</th>
 						<th>Status</th>
 					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Lord of the Mysteries</td>
-						<td>Cuttlefish who loves diving</td>
-						<td>1400</td>
-						<td>
-							<div class="status-section">
-								<p>Reading</p>
-								<input type="checkbox" name="statusChangeBtn" id="statusChangeBtn" class="status-change-btn"></div>
-							</div>
-						</td>
-					</tr>
-				</tbody>	
 			</table>
-				
-			
 		</div>
 		
 		<script src="main.js"></script>
